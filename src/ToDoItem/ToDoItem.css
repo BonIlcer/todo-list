@@ -1,0 +1,7 @@
+.todo-item {
+  padding: 5px;
+}
+.description-wrapper,
+.button-wrapper {
+  display: inline;
+}
