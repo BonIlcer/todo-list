@@ -6,7 +6,7 @@ function ToDoItem({ task, dispatch }) {
     <div className="todo-item">
       <div className="description-wrapper">
         <input
-          onChange={() => dispatch({ type: "change", id: task.id })}
+          onChange={() => dispatch({ type: "complete", id: task.id })}
           id={task.id}
           type="checkbox"
           checked={task.completed}
@@ -19,7 +19,8 @@ function ToDoItem({ task, dispatch }) {
         </label>
       </div>
       <div className="button-wrapper">
-        <input type="button" value="click me" />
+        {/* Replace input with button */}
+        <input type="button" value="•••" />
       </div>
     </div>
   );

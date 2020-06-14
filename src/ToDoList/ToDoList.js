@@ -5,13 +5,21 @@ import AddTask from "../AddTask/AddTask";
 
 function reducer(state, action) {
   const index = state.map((item) => item.id).indexOf(action.id);
+  const lastIndex = state.slice(-1)[0].id;
   let changedState = state.slice();
   switch (action.type) {
-    case "change":
+    case "complete":
       changedState[index] = {
         ...state[index],
         completed: !state[index].completed,
       };
+      return changedState;
+    case "add":
+      changedState.push({
+        id: lastIndex + 1,
+        description: action.description,
+        completed: false,
+      });
       return changedState;
     default:
       throw new Error();
