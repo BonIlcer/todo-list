@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ToDoItem.css";
 
 function ToDoItem({ task, dispatch }) {
+  const [isEdit, setEdit] = useState(false);
+  const [description, setDescription] = useState(task.description);
+  const updateText = (e) => {
+    setDescription(e.target.value);
+  };
+  function editDescription() {
+    if (!isEdit) {
+      setEdit(true);
+    } else {
+      console.log("kek");
+      dispatch({
+        type: "changeDescription",
+        id: task.id,
+        description: description,
+      });
+      setEdit(false);
+    }
+  }
   return (
     <div className="todo-item">
       <div className="description-wrapper">
@@ -11,16 +29,19 @@ function ToDoItem({ task, dispatch }) {
           type="checkbox"
           checked={task.completed}
         />
-        <label
-          style={{ textDecoration: task.completed ? "line-through" : "none" }}
-          htmlFor={task.id}
-        >
-          {task.description}
-        </label>
+        {!isEdit ? (
+          <label
+            style={{ textDecoration: task.completed ? "line-through" : "none" }}
+            htmlFor={task.id}
+          >
+            {description}
+          </label>
+        ) : (
+          <input onChange={updateText} type="text" value={description} />
+        )}
       </div>
       <div className="button-wrapper">
-        {/* Replace input with button */}
-        <input type="button" value="•••" />
+        <button onClick={editDescription}>•••</button>
       </div>
     </div>
   );
