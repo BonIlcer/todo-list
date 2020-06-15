@@ -21,6 +21,12 @@ function reducer(state, action) {
         completed: false,
       });
       return changedState;
+    case "changeDescription":
+      changedState[index] = {
+        ...state[index],
+        description: action.description,
+      };
+      return changedState;
     default:
       throw new Error();
   }
