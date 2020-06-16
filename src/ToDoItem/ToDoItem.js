@@ -37,7 +37,12 @@ function ToDoItem({ task, dispatch }) {
             {description}
           </label>
         ) : (
-          <input onChange={updateText} type="text" value={description} />
+          <input
+            className="text-input"
+            onChange={updateText}
+            type="text"
+            value={description}
+          />
         )}
       </div>
       <div className="button-wrapper">
