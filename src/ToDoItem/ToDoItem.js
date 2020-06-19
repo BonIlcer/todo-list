@@ -4,14 +4,17 @@ import "./ToDoItem.css";
 function ToDoItem({ task, dispatch }) {
   const [isEdit, setEdit] = useState(false);
   const [description, setDescription] = useState(task.description);
+
   const updateText = (e) => {
     setDescription(e.target.value);
+  };
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") editDescription();
   };
   function editDescription() {
     if (!isEdit) {
       setEdit(true);
     } else {
-      console.log("kek");
       dispatch({
         type: "changeDescription",
         id: task.id,
@@ -20,6 +23,7 @@ function ToDoItem({ task, dispatch }) {
       setEdit(false);
     }
   }
+
   return (
     <div className="todo-item">
       <div className="description-wrapper">
@@ -42,6 +46,8 @@ function ToDoItem({ task, dispatch }) {
             onChange={updateText}
             type="text"
             value={description}
+            onKeyDown={handleKeyDown}
+            autoFocus
           />
         )}
       </div>
