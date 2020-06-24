@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import todosData from "../todosData";
 import ToDoItem from "../ToDoItem/ToDoItem";
 import AddTask from "../AddTask/AddTask";
+import "./ToDoList.css";
 
 function reducer(state, action) {
   const index = state.map((item) => item.id).indexOf(action.id);

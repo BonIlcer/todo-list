@@ -23,3 +23,7 @@
 .text-input:focus {
   outline: none;
 }
+
+label {
+  word-break: break-all;
+}
