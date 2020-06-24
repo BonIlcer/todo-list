@@ -13,10 +13,14 @@ function App() {
           <img className="logo" src={logo} alt="logo"></img>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link className="link" to="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link className="link" to="/about">
+                About
+              </Link>
             </li>
           </ul>
         </div>
