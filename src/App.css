@@ -4,6 +4,12 @@
   text-align: center;
 }
 
+.App h2 {
+  width: 70%;
+  margin: 20px auto;
+  text-align: left;
+}
+
 input:focus {
   outline: none;
 }
@@ -28,9 +34,11 @@ input:focus {
 }
 
 .nav-bar ul li {
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 .link {
   text-decoration: none;
+  color: white;
+  font-size: 15pt;
 }

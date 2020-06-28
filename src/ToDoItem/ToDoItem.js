@@ -30,7 +30,7 @@ function ToDoItem({ task, dispatch }) {
         className="description-wrapper"
         onClick={() => dispatch({ type: "complete", id: task.id })}
       >
-        <input id={task.id} type="checkbox" checked={task.completed} />
+        <input id={task.id} type="checkbox" defaultChecked={task.completed} />
         {!isEdit ? (
           <label
             style={{ textDecoration: task.completed ? "line-through" : "none" }}
