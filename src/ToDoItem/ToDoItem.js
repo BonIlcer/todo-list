@@ -26,13 +26,11 @@ function ToDoItem({ task, dispatch }) {
 
   return (
     <div className="todo-item">
-      <div className="description-wrapper">
-        <input
-          onChange={() => dispatch({ type: "complete", id: task.id })}
-          id={task.id}
-          type="checkbox"
-          checked={task.completed}
-        />
+      <div
+        className="description-wrapper"
+        onClick={() => dispatch({ type: "complete", id: task.id })}
+      >
+        <input id={task.id} type="checkbox" checked={task.completed} />
         {!isEdit ? (
           <label
             style={{ textDecoration: task.completed ? "line-through" : "none" }}
