@@ -22,7 +22,9 @@ input:focus {
 }
 
 .logo {
-  display: inline;
+  padding: 15px;
+  height: 50px;
+  filter: invert(100%);
 }
 
 .nav-bar ul {
@@ -41,4 +43,11 @@ input:focus {
   text-decoration: none;
   color: white;
   font-size: 15pt;
+}
+
+.About p {
+  font-size: 15pt;
+  text-align: left;
+  width: 70%;
+  margin: 20px auto;
 }

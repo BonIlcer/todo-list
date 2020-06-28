@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import "./ToDoList/ToDoList";
 import ToDoList from "./ToDoList/ToDoList";
+import About from "./About";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import logo from "./logo.jpg";
+import logo from "./logo.png";
 
 function App() {
   return (
@@ -37,10 +37,6 @@ function App() {
       </Router>
     </div>
   );
-}
-
-function About() {
-  return <h2>About project</h2>;
 }
 
 export default App;

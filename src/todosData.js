@@ -1,27 +1,27 @@
 const todosData = [
   {
     id: 0,
-    description: "keka0",
+    description: "task0",
     completed: false,
   },
   {
     id: 1,
-    description: "keka1",
+    description: "task1",
     completed: false,
   },
   {
     id: 2,
-    description: "keka2",
+    description: "task2",
     completed: false,
   },
   {
     id: 3,
-    description: "keka3",
+    description: "task3",
     completed: true,
   },
   {
     id: 4,
-    description: "keka4",
+    description: "task4",
     completed: false,
   },
 ];
